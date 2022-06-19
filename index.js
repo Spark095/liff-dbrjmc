@@ -3,7 +3,7 @@ import './style.css';
 
 // 0. Import LIFF SDK
 import liff from '@line/liff';
-
+body.style.backgroundColor = '#888888';
 // Body element
 const body = document.getElementById('body');
 
@@ -56,18 +56,17 @@ async function getUserProfile() {
 async function shareMsg() {
   const result = await liff.shareTargetPicker([
     {
-      type: "text",
-      text: "This msg was shared by LIFF"
-    }
-  ])
+      type: 'text',
+      text: 'This msg was shared by LIFF',
+    },
+  ]);
   if (result) {
-    alert("Msg was shared!")
+    alert('Msg was shared!');
   } else {
-    alert("ShareTargetPicker was cancelled by user")
+    alert('ShareTargetPicker was cancelled by user');
   }
-  liff.closeWindow()
+  liff.closeWindow();
 }
-
 
 async function sendMsg() {
   const result = await liff.sendMessages([
@@ -95,8 +94,8 @@ async function sendMsg() {
 
 // 9. Add event listener to share button
 btnShare.onclick = () => {
-  shareMsg()
-}
+  shareMsg();
+};
 btnmessage.onclick = () => {
-  sendMsg()
-}
+  sendMsg();
+};
