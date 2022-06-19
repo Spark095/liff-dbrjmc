@@ -17,7 +17,7 @@ const email = document.getElementById('email');
 // Button elements
 const btnShare = document.getElementById('btnShare');
 const btnmessage = document.getElementById('btnmessage');
-
+const btnlogin = document.getElementById('btnlogin');
 async function main() {
   // 2. liff.ready
   liff.ready.then(() => {
@@ -29,6 +29,7 @@ async function main() {
     }
     btnShare.style.display = 'block';
     btnmessage.style.display = 'block';
+    btnlogin.style.display = 'block';
     <button onclick="myFunction()">Click me</button>;
   });
   // 3. Try a LIFF function
@@ -99,3 +100,7 @@ btnShare.onclick = () => {
 btnmessage.onclick = () => {
   sendMsg();
 };
+btnlogin.onclick = () => {
+  // alert("Msg was shared!")
+  liff.login()
+}
