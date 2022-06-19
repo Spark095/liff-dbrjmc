@@ -3,7 +3,7 @@ import './style.css';
 
 // 0. Import LIFF SDK
 import liff from '@line/liff';
-body.style.backgroundColor = '#888888';
+
 // Body element
 const body = document.getElementById('body');
 
